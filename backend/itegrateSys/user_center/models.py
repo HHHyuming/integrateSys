@@ -8,7 +8,9 @@ class Permission(models.Model):
 
     permission_name = models.CharField(max_length=128, verbose_name='权限名称')
     router_url = models.CharField(max_length=128, verbose_name='路由地址')
-    parent_permission = models.ForeignKey('self')
+    parent_permission = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='父级权限')
+    # 角色权限多对多
+    role = models.ManyToManyField('Role')
 
 
 class Role(models.Model):
