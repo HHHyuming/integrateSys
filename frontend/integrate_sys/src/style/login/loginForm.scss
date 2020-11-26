@@ -1,0 +1,26 @@
+.login-form-style{
+
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  margin: -180px 0 0 -160px;
+  width: 320px;
+  height: 380px;
+  padding: 36px;
+  background: #fff;
+
+
+}
+@media screen and (max-width: 970px) {
+  .login-form-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -160px;
+    width: 245px;
+    height: 380px;
+    padding: 36px;
+    background: #fff;
+    border-radius: 3px;
+  }
+}

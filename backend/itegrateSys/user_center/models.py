@@ -1,16 +1,19 @@
 import datetime
 
 from django.db import models
-from django.forms import Field
 
 
 class Permission(models.Model):
-
     permission_name = models.CharField(max_length=128, verbose_name='权限名称')
     router_url = models.CharField(max_length=128, verbose_name='路由地址')
     parent_permission = models.ForeignKey('self', on_delete=models.CASCADE, verbose_name='父级权限')
     # 角色权限多对多
     role = models.ManyToManyField('Role')
+
+    create_time = models.DateTimeField(verbose_name='创建时间', auto_now=True)
+
+    def __str__(self):
+        return f'{self.permission_name}:{self.router_url}'
 
 
 class Role(models.Model):
@@ -27,8 +30,16 @@ class Role(models.Model):
     def __str__(self):
         return self.get_identity_display()
 
+
 class Department(models.Model):
-    pass
+    dep_name = models.CharField(max_length=64, verbose_name='部门名称')
+    create_time = models.DateTimeField(default=datetime.datetime.now(), auto_now=True, verbose_name='创建时间')
+    parent_dep = models.ForeignKey('self', on_delete=models.CASCADE)
+    order_num = models.IntegerField(verbose_name='排序字段')
+
+    def __str__(self):
+        return f'{self.dep_name}:{self.create_time}'
+
 
 class User(models.Model):
     gender_choice = (
@@ -36,7 +47,7 @@ class User(models.Model):
         (1, '女性')
     )
     use_status = (
-        (0,'不可用'),
+        (0, '不可用'),
         (1, '可用')
     )
 
@@ -50,7 +61,7 @@ class User(models.Model):
     phone_number = models.CharField(max_length=32, verbose_name='电话号码')
     use_status = models.SmallIntegerField(choices=use_status, verbose_name='用户状态')
     last_update_time = models.DateTimeField(verbose_name='修改时间', db_index=True)
-    avatar = models.ImageField()
+    avatar = models.CharField(max_length=512, verbose_name='图片地址')
     # 角色
     role = models.ForeignKey(Role, on_delete=models.CASCADE)
     # 部门
