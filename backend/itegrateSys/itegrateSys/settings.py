@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -124,3 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# JWT 配置
+
+JWT_EXP_TIME = 5
+
+# 验证码存储地址
+CODE_PATH = os.path.join(BASE_DIR, 'static')
+
+# REST FRAMEWORK 配置
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'utils.errorHandle.custom_exception_handler',  # 自定义异常处理
+}
