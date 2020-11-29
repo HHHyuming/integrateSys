@@ -1,7 +1,6 @@
 <template>
     <div>
-        <el-input v-model="value">
-
+        <el-input v-model="inputValue" :placeholder="placeholder" show-password>
         </el-input>
     </div>
 </template>
@@ -10,9 +9,12 @@
     export default {
         name: "Input",
         props:{
-            value:{
+            inputValue:{
                 default: ''
-            }
+            },
+            placeholder:{
+                default: '请输入内容'
+            },
         }
     };
 </script>

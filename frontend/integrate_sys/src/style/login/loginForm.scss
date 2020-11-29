@@ -8,7 +8,24 @@
   height: 380px;
   padding: 36px;
   background: #fff;
+  .title{
+    font-size: 20px;
+    color: rgba(0,0,0,.85);
+    margin: 0 auto 40px auto;
+    text-align: center;
+    .span-title{
+      display: inline-block;
+      margin-right: 20px;
+    }
+    i{
+      font-size: 24px;
+      color: #0077aa;
+    }
+  }
 
+  .row-three{
+    margin-top: 22px;
+  }
 
 }
 @media screen and (max-width: 970px) {
