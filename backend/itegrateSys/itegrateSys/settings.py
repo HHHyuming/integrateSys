@@ -136,3 +136,8 @@ CODE_PATH = os.path.join(BASE_DIR, 'static')
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'utils.errorHandle.custom_exception_handler',  # 自定义异常处理
 }
+
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"
+# ]
