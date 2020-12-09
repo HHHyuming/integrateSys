@@ -14,6 +14,10 @@ export default new VueRouter({
             component: () => import('@/views/login/Login')
         },
         {
+          path: '/index',
+          component: () => import('@/views/Index')
+        },
+        {
             path: '/test',
             component: () => import('@/components/base/Input')
         }

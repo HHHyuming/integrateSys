@@ -2,9 +2,16 @@
   "id": "2232309",
   "name": "integrateSys",
   "font_family": "iconfont",
-  "css_prefix_text": "el-icon-in",
+  "css_prefix_text": "pb-",
   "description": "集成管理后台",
   "glyphs": [
+    {
+      "icon_id": "5206477",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
     {
       "icon_id": "1048867",
       "name": "密码",

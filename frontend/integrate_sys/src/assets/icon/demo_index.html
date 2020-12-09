@@ -31,6 +31,12 @@
           <ul class="icon_lists dib-box">
           
             <li class="dib">
+              <span class="icon iconfont">&#xe615;</span>
+                <div class="name">锁</div>
+                <div class="code-name">&amp;#xe615;</div>
+              </li>
+          
+            <li class="dib">
               <span class="icon iconfont">&#xe614;</span>
                 <div class="name">密码</div>
                 <div class="code-name">&amp;#xe614;</div>
@@ -93,20 +99,29 @@
         <ul class="icon_lists dib-box">
           
           <li class="dib">
-            <span class="icon iconfont el-icon-inicon_password"></span>
+            <span class="icon iconfont pb-suo"></span>
             <div class="name">
-              密码
+              锁
             </div>
-            <div class="code-name">.el-icon-inicon_password
+            <div class="code-name">.pb-suo
             </div>
           </li>
           
           <li class="dib">
-            <span class="icon iconfont el-icon-inzhongyingwenqiehuan"></span>
+            <span class="icon iconfont pb-icon_password"></span>
+            <div class="name">
+              密码
+            </div>
+            <div class="code-name">.pb-icon_password
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont pb-zhongyingwenqiehuan"></span>
             <div class="name">
               中英文切换
             </div>
-            <div class="code-name">.el-icon-inzhongyingwenqiehuan
+            <div class="code-name">.pb-zhongyingwenqiehuan
             </div>
           </li>
           
@@ -128,7 +143,7 @@
 <pre><code class="language-html">&lt;link rel="stylesheet" href="./iconfont.css"&gt;
 </code></pre>
         <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
-<pre><code class="language-html">&lt;span class="iconfont el-icon-inxxx"&gt;&lt;/span&gt;
+<pre><code class="language-html">&lt;span class="iconfont pb-xxx"&gt;&lt;/span&gt;
 </code></pre>
         <blockquote>
           <p>"
@@ -141,18 +156,26 @@
           
             <li class="dib">
                 <svg class="icon svg-icon" aria-hidden="true">
-                  <use xlink:href="#el-icon-inicon_password"></use>
+                  <use xlink:href="#pb-suo"></use>
                 </svg>
-                <div class="name">密码</div>
-                <div class="code-name">#el-icon-inicon_password</div>
+                <div class="name">锁</div>
+                <div class="code-name">#pb-suo</div>
             </li>
           
             <li class="dib">
                 <svg class="icon svg-icon" aria-hidden="true">
-                  <use xlink:href="#el-icon-inzhongyingwenqiehuan"></use>
+                  <use xlink:href="#pb-icon_password"></use>
+                </svg>
+                <div class="name">密码</div>
+                <div class="code-name">#pb-icon_password</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#pb-zhongyingwenqiehuan"></use>
                 </svg>
                 <div class="name">中英文切换</div>
-                <div class="code-name">#el-icon-inzhongyingwenqiehuan</div>
+                <div class="code-name">#pb-zhongyingwenqiehuan</div>
             </li>
           
           </ul>

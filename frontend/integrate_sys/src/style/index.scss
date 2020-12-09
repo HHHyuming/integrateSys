@@ -1,0 +1,27 @@
+@import "variable";
+
+.index-page{
+  .aside{
+    color: white;
+    width: 300px;
+    background-color: $aside-color;
+    height: 100vh;
+    .title{
+      padding: 15px;
+      display: flex;
+      font-size: 30px;
+      justify-content: space-around;
+      .logo{
+        width: 40px;
+        height: 40px;
+        background-image: url("https://cn.vuejs.org/images/logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+      }
+    }
+
+  }
+
+}
