@@ -19,7 +19,10 @@ from itegrateSys import settings
 
 
 class UserView(APIView):
-    pass
+    def get(self, request):
+        user_queryset = User.objects.all()
+        serializer = UserInfoSerializer(user_queryset, many=True)
+        return myResponse(data=serializer.data).render()
 
 
 @api_view(['POST'])
